@@ -21,9 +21,8 @@ export const Navbar = () => {
       <Link to='/Signup'>Sign-Up</Link>
       {/* <a href="#contact"></a> */}
       <Link to='/Login'>Login</Link>
-</div>
+   </div>
     </div>
-    <FilterBAr/>
     <Caursol/>
     <ProductView/>
     </>

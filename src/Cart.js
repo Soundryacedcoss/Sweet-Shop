@@ -68,6 +68,7 @@ function EmptyButtonHandler() {
     <>
     <p style={Emptymsg}>Your CART is empty</p>
     <div style={Display} className="cartDiv">
+      <div className="ProductDetail">
       {productData.cartArr.map((item) => (
         <div className="CartDivDeatail">
           <div className="CartImgDiv">
@@ -75,9 +76,9 @@ function EmptyButtonHandler() {
           </div>{" "}
           <div className="ProductNameDiv">
             {" "}
-            <p>{item.name}</p> <p>{item.price}</p>
+            <p>{item.name}</p> <p>{item.price} Rs</p>
           </div>{" "}
-          <div>
+          <div className="quantityButtonDiv">
             <button className="button" onClick={() => IncreaseHandler(item.id)}>
               +
             </button>
@@ -88,10 +89,11 @@ function EmptyButtonHandler() {
           </div>
         </div>
       ))}
-      <p style={Display} className="TotalPrice">Total: {Price}</p> <br />
+      </div>
+      <p style={Display} className="TotalPrice">Total: {Price} rs</p> <br />
        <br />
        <div style={Display}>
-       <button onClick={BuyButtonHandler} className="Button1">Buy Now</button>
+       <button onClick={BuyButtonHandler} className="Button1">Buy Now</button> { " "}
       <button className="Button1" onClick={EmptyButtonHandler}>Empty Cart</button>
     </div>
     </div>

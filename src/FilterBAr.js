@@ -1,6 +1,9 @@
 import React from 'react'
 import style from './Navbar.module.css'
 export const FilterBAr = () => {
+  const FilterButtonHandler=()=>{
+
+  }
   return (
     <div className='Flex'>
         <div>
@@ -16,6 +19,7 @@ export const FilterBAr = () => {
             <option value="">Assending</option>
             <option value="">Dessending</option>
         </select>
+        <button onClick={FilterButtonHandler} className='Filter'>Filter</button>
         </div>
         
     </div>
