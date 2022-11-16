@@ -1,38 +1,234 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .Flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1%;
+  column-gap: 15%;
+  background-color: #345894;
+}
+.LogoImg{
+  width: 8%;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+  div.flex{
+   display: block;
+  }
+} */
+.content {
+  position: relative;
+}
+.carousel-content {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 50;
 }
 
-.App-link {
-  color: #61dafb;
+.slideshow {
+  height: 100%;
+  overflow: hidden; /* to hide slides in x-direction */
+  position: relative;
+}
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+  display: flex;
+  /* i give the width 300 beacuse i have taken 3 images */
+  width: 300%;
+  height: 100%;
+  position: relative;
+ 
+  animation: slideshow 20s infinite;
+}
+/* define width and height for images*/
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* @keyframes are used to provide animations
+We make these settings for 3 image carousel. */
+@keyframes slideshow {
+  0% { left: 0; }
+  10% { left: 0; }
+  15% { left: -100%; }
+  25% { left: -100%; }
+  30% { left: -200%; }
+  40% { left: -200%; }
+  45% { left: -100%; }
+  55% { left: -100%; }
+  60% { left: 0%; }
+  70% { left: 0%; }
+}
+/* ----- end of slideshow stylings ----- */
+
+/* ----- carousel control buttons stylings ----- */
+.slide-btn {
+  background-color: #bbb;
+  border-radius: 50%;
+  border: .2rem solid #d38800;
+  width: 1.2rem;
+  height: 1.2rem;
+  outline: none;
+  cursor: pointer;
+  /* stylings for positioning the buttons at
+  the bottom of the carousel */
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 70;
+}
+/* As we provide position as absolute,
+the buttons places one over the other.
+So, we have to place them individually
+at their correct positions. */
+.slide-btn-1 {
+  left: 45%;
+}
+.slide-btn-2 {
+  left: 50%;
+}
+.slide-btn-3 {
+  left: 55%;
+}
+.slide-btn-4 {
+  left: 60%;
+}
+/* When we focus on the particular button,
+the animation stops to that particular image
+to which the button is associated. */
+.slide-btn-1:focus~.slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+.slide-btn-2:focus~.slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+.slide-btn-3:focus~.slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+  background-color: #308d46;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FilerBar PAge Css */
+.Flex{
+  display: flex;
+  padding-left: 28%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /* margin-left: 20%; */
+  background-color:#fad1cf;
+}
+select{
+  padding: 1%;
+  font-size: 18px;
+}
+
+/* productView page styling */
+#products{
+  overflow: hidden;
+}
+
+#products .product{
+  float: left;
+  margin-bottom: 20px;
+  max-width: 280px;
+  padding: 20px;
+  text-align: center;
+}
+
+#products .product .title a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: light;
+  color: #000000;
+}
+#products .product .add-to-cart {
+	width:500px;
+	background:#fad1cf;; 
+	padding: 8px 14px 10px; 
+	border:1px solid #3e9cbf;
+	cursor:pointer; 
+	font-size:1.2em;
+	display: block;
+	max-width: 60%;
+	margin: 20px auto 0px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.7); 
+	color:black;
+	-webkit-box-shadow: inset 0px 1px 0px #2f373a, 0px 5px 0px 0px #f486a9f5, 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px #f486a9f5, 0px 5px 0px 0px #f486a9f5, 0px 10px 5px #f486a9f5;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+ #products .product .add-to-cart:hover,  
+ #products .product .add-to-cart:focus, 
+ #contact-form .submit input[type="submit"]:hover, 
+ #contact-form .submit input[type="submit"]:focus {
+	color:dodgerblue;
+	-webkit-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
+	-moz-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
+	box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
+}
+
+/* signup css*/
+ input[type=text], input[type=number] ,input[type=password]{
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.container1 {
+  margin-top: 2%;
+  border: solid dodgerblue 2px;
+  border-radius: 10%;
+  background-color: gray;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 2%;
+}
+.SignUpBUtton{
+  background-color: pink;
+  padding: 3%;
+  font-size: 17px;
+  border-style: none;
+  border-radius: 3%;
+}
+/* Login css */
+
+
+/*cART PAGE STYLING */
+.cartDiv{
+  border: solid dodgerblue 2px;
+  border-radius: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+}
+.CartDivDeatail{
+  display: flex;
+  column-gap: 5%;
+
 }

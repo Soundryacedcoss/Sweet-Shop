@@ -1,0 +1,73 @@
+.topnav {
+    overflow: hidden;
+  }
+  
+  a {
+    float: right;
+    color: #f486a9f5;
+    text-align: center;
+    padding: 25px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.4s;
+  }
+  
+  .topnav a:hover {
+    /* background-color: #ddd;
+    color: black; */
+    /* box-shadow: 10px 15px 5px red; */
+    opacity: 0.5;
+    color: red;
+    background-color: #ddd;
+  }
+  
+  .Flex{
+    display: flex;
+    padding: 1%;
+    column-gap: 15%;
+    background-color: white;
+    margin-left: 5%;
+  }
+  .LogoImg{
+    width: 14%;
+    
+  }
+  @media only screen and (max-width: 600px) {
+   div.Flex{
+   display: inline;
+    }
+  }
+  .StoreName{
+    color:#f486a9f5 ;
+    transition: 0.3s; 
+  }
+  .StoreName:hover{
+    box-shadow: 10px 5px 5px red;
+    border-radius: 5px;
+    opacity: 0.5;
+    color: red;
+  }
+  .SearchInput{
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* border-style:; */
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  .FilerterDropDown{
+   
+    /* padding-top: 5%;
+    padding-bottom: 5%; */
+    /* margin-top: 5%; */
+    color: white;
+    /* padding: 16px; */
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    
+  }
