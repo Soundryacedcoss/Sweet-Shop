@@ -30,15 +30,23 @@ export const Login = () => {
       const passwHandler=(e)=>{
           setPass(e.target.value)
       }
+      // Back to sighn up page
+      const SignUpHere=()=>{
+        navigate('/Signup')
+      }
+      // Back to home
+      const BackHome=()=>{
+        navigate('/')
+      }
   return (
-    <div>
-    <div class="container1">
+    <div >
+    <div class="LoginPage">
     <h2>Login Here</h2>
-    <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" onChange={userNameHandler} required/>
-    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" onChange={passwHandler} required/>    
     <button onClick={LoginButtonHandler} className='SignUpBUtton' type="submit">Login</button>
+    <p onClick={SignUpHere}>Don't Have Account <b>Register Now</b></p>
+    or <p onClick={BackHome}>Back To home</p>
     </div>
     </div>
   )

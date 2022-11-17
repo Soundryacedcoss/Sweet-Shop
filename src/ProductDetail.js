@@ -14,7 +14,7 @@ import img8 from './image/sonpapadi.png'
     { id: "105", name: "gulab Jamun", image: img5, price: 250, quantity: 0,rating: "⭐⭐⭐" },
     { id: "106", name: "Jalebi", image: img6, price: 158, quantity: 0,rating: "⭐⭐⭐⭐"},
     { id: "107", name: "Rasgulla", image: img7, price: 850, quantity: 0,rating: "⭐⭐" },
-    { id: "107", name: "Son Papadi", image: img8, price: 450, quantity: 0,rating: "⭐⭐⭐⭐⭐" }
+    { id: "108", name: "Son Papadi", image: img8, price: 450, quantity: 0,rating: "⭐⭐⭐⭐⭐" }
 ]
 export default ProductDetail;
 

@@ -6,6 +6,7 @@ import { ProductView } from './ProductView';
 import img1 from './image/Screenshot_2022-11-16_11-16-38.png'
 import { Link } from 'react-router-dom';
 import { DataContext } from './App';
+import { Footer } from './Footer';
 export const Navbar = () => {
   const cartlength=useContext(DataContext)
   console.log(cartlength.cartArr.length);
@@ -25,6 +26,7 @@ export const Navbar = () => {
     </div>
     <Caursol/>
     <ProductView/>
+    <Footer/>
     </>
   )
 }

@@ -41,7 +41,7 @@
   width: 300%;
   height: 100%;
   position: relative;
- 
+
   animation: slideshow 20s infinite;
 }
 /* define width and height for images*/
@@ -57,16 +57,36 @@
 /* @keyframes are used to provide animations
 We make these settings for 3 image carousel. */
 @keyframes slideshow {
-  0% { left: 0; }
-  10% { left: 0; }
-  15% { left: -100%; }
-  25% { left: -100%; }
-  30% { left: -200%; }
-  40% { left: -200%; }
-  45% { left: -100%; }
-  55% { left: -100%; }
-  60% { left: 0%; }
-  70% { left: 0%; }
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  15% {
+    left: -100%;
+  }
+  25% {
+    left: -100%;
+  }
+  30% {
+    left: -200%;
+  }
+  40% {
+    left: -200%;
+  }
+  45% {
+    left: -100%;
+  }
+  55% {
+    left: -100%;
+  }
+  60% {
+    left: 0%;
+  }
+  70% {
+    left: 0%;
+  }
 }
 /* ----- end of slideshow stylings ----- */
 
@@ -74,7 +94,7 @@ We make these settings for 3 image carousel. */
 .slide-btn {
   background-color: #bbb;
   border-radius: 50%;
-  border: .2rem solid #d38800;
+  border: 0.2rem solid #d38800;
   width: 1.2rem;
   height: 1.2rem;
   outline: none;
@@ -106,15 +126,15 @@ at their correct positions. */
 /* When we focus on the particular button,
 the animation stops to that particular image
 to which the button is associated. */
-.slide-btn-1:focus~.slideshow-wrapper {
+.slide-btn-1:focus ~ .slideshow-wrapper {
   animation: none;
   left: 0;
 }
-.slide-btn-2:focus~.slideshow-wrapper {
+.slide-btn-2:focus ~ .slideshow-wrapper {
   animation: none;
   left: -100%;
 }
-.slide-btn-3:focus~.slideshow-wrapper {
+.slide-btn-3:focus ~ .slideshow-wrapper {
   animation: none;
   left: -200%;
 }
@@ -124,25 +144,25 @@ to which the button is associated. */
 }
 
 /* FilerBar PAge Css */
-.Flex{
+.Flex {
   display: flex;
   padding-left: 28%;
   padding-top: 2%;
   padding-bottom: 2%;
   /* margin-left: 20%; */
-  background-color:#fad1cf;
+  background-color: #fad1cf;
 }
-select{
+select {
   padding: 1%;
   font-size: 18px;
 }
 
 /* productView page styling */
-#products{
+#products {
   overflow: hidden;
 }
 
-#products .product{
+#products .product {
   float: left;
   margin-bottom: 20px;
   max-width: 280px;
@@ -150,53 +170,66 @@ select{
   text-align: center;
 }
 
-#products .product .title a{
+#products .product .title a {
   text-decoration: none;
   font-size: 16px;
   font-weight: light;
   color: #000000;
 }
 #products .product .add-to-cart {
-	width:500px;
-	background:#fad1cf;; 
-	padding: 8px 14px 10px; 
-	border:1px solid #3e9cbf;
-	cursor:pointer; 
-	font-size:1.2em;
-	display: block;
-	max-width: 60%;
-	margin: 20px auto 0px;
-	text-decoration: none;
-	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.7); 
-	color:black;
-	-webkit-box-shadow: inset 0px 1px 0px #2f373a, 0px 5px 0px 0px #f486a9f5, 0px 10px 5px #999;
-	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-	box-shadow: inset 0px 1px 0px #f486a9f5, 0px 5px 0px 0px #f486a9f5, 0px 10px 5px #f486a9f5;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+  width: 500px;
+  background: #fad1cf;
+  padding: 8px 14px 10px;
+  border: 1px solid #3e9cbf;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: block;
+  max-width: 60%;
+  margin: 20px auto 0px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.7);
+  color: black;
+  -webkit-box-shadow: inset 0px 1px 0px #2f373a, 0px 5px 0px 0px #f486a9f5,
+    0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73,
+    0px 10px 5px #999;
+  box-shadow: inset 0px 1px 0px #f486a9f5, 0px 5px 0px 0px #f486a9f5,
+    0px 10px 5px #f486a9f5;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
- #products .product .add-to-cart:hover,  
- #products .product .add-to-cart:focus, 
- #contact-form .submit input[type="submit"]:hover, 
- #contact-form .submit input[type="submit"]:focus {
-	color:dodgerblue;
-	-webkit-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
-	-moz-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
-	box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue, 0px 2px 5px dodgerblue;
+#products .product .add-to-cart:hover,
+#products .product .add-to-cart:focus,
+#contact-form .submit input[type="submit"]:hover,
+#contact-form .submit input[type="submit"]:focus {
+  color: dodgerblue;
+  -webkit-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue,
+    0px 2px 5px dodgerblue;
+  -moz-box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue,
+    0px 2px 5px dodgerblue;
+  box-shadow: inset 0px 1px 0px dodgerblue, 0px 2px 0px 0px dodgerblue,
+    0px 2px 5px dodgerblue;
 }
 
 /* signup css*/
- input[type=text], input[type=number] ,input[type=password]{
+input[type="text"],
+input[type="number"],
+input[type="password"] {
   width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 20px;
 }
 
-input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -209,61 +242,111 @@ input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
   margin-right: 25%;
   padding-bottom: 2%;
 }
-.SignUpBUtton{
-  background-color: pink;
+.SignUpBUtton {
+  background-color: lightblue;
   padding: 3%;
   font-size: 17px;
   border-style: none;
-  border-radius: 3%;
+  border-radius: 20px;
 }
-/* Login css */
-
-
+/* Login and sighup page css */
+.LoginPage {
+  border-radius: 24px;
+  margin-top: 2%;
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: 0.3s;
+  background-color: white;
+}
+.LoginPage:hover {
+  box-shadow: 0 0 5px 5px lightblue;
+}
 /*cART PAGE STYLING */
-.cartDiv{
-  border: solid #fad1cf 2px;
+.cartDiv {
   border-radius: 5%;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 3%;
+  margin-top: 2%;
   width: 50%;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  
+
+  padding-bottom: 2%;
+  box-shadow: 0 8px 8px -4px lightblue;
+  background-color: #eee;
 }
-.CartDivDeatail{
-  /* margin-right: 25%; */
-  /* margin-right: 14%; */
+.CartDivDeatail {
   display: flex;
   column-gap: 9%;
-  margin-top: 1%;
+  margin-top: 2%;
   padding-top: 1%;
-  
+  margin-right: 4%;
 }
-.ProductDetail{
-  margin-left: 15%;
+.Cart {
+  padding: 1% 2% 2% 3%;
+  height: 100%;
+  padding-bottom: 4%;
 }
-.ProductNameDiv{
-  margin-top: 15%;
+.ProductNameDiv {
+  margin-top: 9%;
   font-size: 20px;
 }
-.quantityButtonDiv{
-  margin-top: 25%;
+.quantityButtonDiv {
+  margin-top: 10%;
 }
-.Button1{
-  background-color:#fad1cf;
-  padding: 4%;
+.Button1 {
+  background-color: lightblue;
+  padding: 3% 5% 3% 5%;
   border-style: none;
+  border-radius: 22%;
+  margin-left: 4%;
+}
+.Quantitybutton {
+  border-radius: 50%;
+  border-style: none;
+  height: 26%;
+  width: 100%;
+  /* padding: 2%; */
+  background-color: lightblue;
+  color: #000000;
+  font-size: 18px;
+}
+.CartImgDiv {
+  width: 60%;
   border-radius: 30%;
+  /* height: 13%; */
 }
-.CartImgDiv{
-  width: 50%;
-  height: 3%;
+.CartImgDiv:hover {
+  box-shadow: 0 0 50px #ccc;
 }
-.TotalPrice{
+.TheameLogo {
+  width: 15%;
+  margin-left: 55%;
+}
+.EmptyCartPara {
+  padding: 4%;
+  border-radius: 14px;
+  border: solid goldenrod 4px;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 0 0 50px #ccc;
+}
+.BackBUtton {
+  border-radius: 20%;
+  border-style: none;
+  font-size: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.flex {
+  display: flex;
+  column-gap: 36%;
+}
+.TotalPrice {
   font-size: 18px;
   color: black;
 }
-.Filter{
+.Filter {
   font-size: 20px;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -273,9 +356,26 @@ input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
   border-radius: 5px;
 }
 /* product VIEW page style */
-#SearchResultPara{
+#SearchResultPara {
   text-align: center;
   color: black;
   font-size: 30px;
   margin-right: 59%;
+}
+
+/* Footer Styling */
+.Footer {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  column-gap: 6%;
+  background-color: gray;
+  color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+.FooterDiv {
+  width: 25%;
 }

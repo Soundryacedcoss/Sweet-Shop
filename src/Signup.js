@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './App.css'
 export default function Signup() {
   const navigate=useNavigate();
@@ -76,32 +76,34 @@ export default function Signup() {
         navigate('/Login')
       }
     }
+    // back to login page
+    const Loginhere=()=>{
+      navigate('/Login')
+    }
+    // back to home page
+    const BackHome=()=>{
+      navigate('/')
+    }
   return (
-    <div>
-       <div className="container1">
+    <div >
+      
+       <div className="LoginPage">
           <h1>Sign Up</h1>
-          <p>Please fill in this form to create an account.</p>
           <hr />
-          <label>Full name</label>
+         
           <input type="text" name="name" placeholder="Full name" onChange={nameHandler}  />
-          <label htmlFor="email">
-            <b>Email</b>
-          </label>
           <input type="text" placeholder="Enter Email" name="email" onChange={emailHandler} />
-          <label>UserName</label>
           <input type="text" name="username" placeholder="Enter username" onChange={usernameHandler}/>
-          <label htmlFor="psw">
-            <b>Password</b>
-          </label>
           <input
             type="password"
             placeholder="Enter Password"
             name="psw" onChange={passwordHandler}
             minLength={4} maxLength={20}
           />
-          <label>Mobile</label>{" "}
           <input type="text" name="number" placeholder="Enter your number" onChange={numberHandler} maxLength={10} minLength={10} />
-          <button className="SignUpBUtton" onClick={SignUpButtonHandler}>Sign Up</button>
+          <button className="SignUpBUtton" onClick={SignUpButtonHandler}>Sign Up</button> 
+          <p onClick={Loginhere}> Already have account <b > LoginHere</b></p>
+          or <p onClick={BackHome}>Back To home</p>
          </div>
     </div>
   )
