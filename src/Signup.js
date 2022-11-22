@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './App.css'
+
 export default function Signup() {
   const navigate=useNavigate();
     const[name,setName]=useState("")
@@ -81,13 +82,19 @@ export default function Signup() {
       navigate('/Login')
     }
     // back to home page
-    const BackHome=()=>{
+    const BackHAndler=()=>{
       navigate('/')
     }
+
   return (
-    <div >
-      
-       <div className="LoginPage">
+    <div>
+     {/* <div className="flex"> */}
+        <button onClick={BackHAndler} className="BackBUtton">
+          Back To Home
+        </button>
+        
+      {/* </div> */}
+       <div className="LoginPage" >
           <h1>Sign Up</h1>
           <hr />
          
@@ -102,8 +109,7 @@ export default function Signup() {
           />
           <input type="text" name="number" placeholder="Enter your number" onChange={numberHandler} maxLength={10} minLength={10} />
           <button className="SignUpBUtton" onClick={SignUpButtonHandler}>Sign Up</button> 
-          <p onClick={Loginhere}> Already have account <b > LoginHere</b></p>
-          or <p onClick={BackHome}>Back To home</p>
+          <p className="LoginSignUpLink" onClick={Loginhere}> Already have account <b > LoginHere</b></p>
          </div>
     </div>
   )

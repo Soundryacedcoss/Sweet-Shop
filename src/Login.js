@@ -35,18 +35,20 @@ export const Login = () => {
         navigate('/Signup')
       }
       // Back to home
-      const BackHome=()=>{
+      const BackHAndler=()=>{
         navigate('/')
       }
   return (
-    <div >
+    <div className='PageDiv'>
+      <button onClick={BackHAndler} className="BackBUtton">
+          Back To Home
+        </button>
     <div class="LoginPage">
     <h2>Login Here</h2>
     <input type="text" placeholder="Enter Username" name="uname" onChange={userNameHandler} required/>
     <input type="password" placeholder="Enter Password" name="psw" onChange={passwHandler} required/>    
     <button onClick={LoginButtonHandler} className='SignUpBUtton' type="submit">Login</button>
-    <p onClick={SignUpHere}>Don't Have Account <b>Register Now</b></p>
-    or <p onClick={BackHome}>Back To home</p>
+    <p className="LoginSignUpLink" onClick={SignUpHere}>Don't Have Account <b>Register Now</b></p>
     </div>
     </div>
   )
