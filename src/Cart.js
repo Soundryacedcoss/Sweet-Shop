@@ -76,7 +76,16 @@ export const Cart = () => {
   const BackHAndler = () => {
     navigate("/");
   };
-
+// REmove indivisual product from cart ***************************************
+const RemoveHandler=(val)=>{
+  for (let i = 0; i < productData.cartArr.length; i++) {
+      if (val ===productData.cartArr[i].id) {
+          alert("Warning ! your product will delete from cart");
+          productData.cartArr.splice(i, 1);
+          productData.setCartArr([...productData.cartArr]);
+      }
+    }
+ }
   return (
     <div className="Cart">
       <div className="flex">
@@ -114,6 +123,7 @@ export const Cart = () => {
                   -
                 </button>{" "}
               </div>
+              <div style={{marginTop:"80px", color:"red",fontSize:"20px"}} onClick={()=>RemoveHandler(item.id)}>remove</div>
             </div>
           ))}
         </div>
