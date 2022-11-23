@@ -3,8 +3,9 @@ import { DataContext } from './App'
 import productsData from "./ProductDetail";
 import style from './Navbar.module.css'
 export const ProductView = () => {
-  const [Inputvalue, setInputValue] = useState();
+ 
   const[Catagory,setCatagory]=useState("")
+  const [Inputvalue, setInputValue] = useState();
   const SearchInputHandler = (event) => {
     setInputValue(event.target.value);
     console.log(Inputvalue);
@@ -41,7 +42,7 @@ const SelectCatagoryHandler=(e)=>{
 const SelectHandler=(e)=>{
   setOPtionValue(e.target.value)
 }
-// Here i am filtering the product BY price 
+// Here i am filtering the product BY price **********************************
 const FilterButtonHandler=()=>{
   if (Catagory==="Price" && OptionValue==="Assending") {
     console.log(OptionValue);
