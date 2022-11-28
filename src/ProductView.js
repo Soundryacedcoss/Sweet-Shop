@@ -80,13 +80,10 @@ const FilterButtonHandler=()=>{
   for (let i = 0; i < filterProducts.length; i++) {
     var temp = Inputvalue.toLowerCase();
     var name = filterProducts[i].name.toLowerCase();
-    if (Inputvalue === "") {
-      alert("Please enter name");
-    } else if (name.match(temp)) {
+    if(name.match(temp)) {
       console.log(productsData[i]);
       SearchvalArr.push(productsData[i]);
       setFilterArr(SearchvalArr);
-     
     }
   }
 };
